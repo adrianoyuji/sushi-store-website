@@ -1,0 +1,51 @@
+.navigator {
+  font-size: large;
+  height: 5vh;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  background-color: #1d1d1f;
+}
+.home-button {
+  padding-left: 10px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.home-left {
+  color: white;
+}
+.home-right {
+  color: red;
+  font-weight: bold;
+}
+a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+.selected {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: red;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.nav-button {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #c4c4c4;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For even smaller mobile phones: */
+
+  [class*="nav-buttons"] {
+    font-size: small;
+  }
+}

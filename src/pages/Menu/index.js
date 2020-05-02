@@ -1,14 +1,19 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import "./styles.css";
 import Category from "../../components/Category";
 import Product from "../../components/Product";
-import { MenuContext } from "../../contexts/menu";
+import { GlobalContext } from "../../contexts/global";
+import ProductDetail from "../../components/ProductDetail";
+import PopUp from "../../components/PopUp";
 import Spinner from "react-bootstrap/Spinner";
 
 export default function Menu() {
-  const { menu } = useContext(MenuContext);
+  const { menu } = useContext(GlobalContext);
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedProduct, setSelectedProduct] = useState(null);
   const [fakeLoading, setFakeLoading] = useState(true);
+  const [showPopUp, setShowPopUp] = useState(false);
+  const [addedItem, setAddedItem] = useState("");
   const categories = getCategories();
 
   function getCategories() {
@@ -25,7 +30,11 @@ export default function Menu() {
       return (
         <>
           {menu.map((item, index) => (
-            <Product item={item} key={index} />
+            <Product
+              item={item}
+              key={index}
+              setSelectedProduct={setSelectedProduct}
+            />
           ))}
         </>
       );
@@ -36,7 +45,11 @@ export default function Menu() {
       return (
         <>
           {filteredMenu.map((item, index) => (
-            <Product item={item} key={index} />
+            <Product
+              item={item}
+              key={index}
+              setSelectedProduct={setSelectedProduct}
+            />
           ))}
         </>
       );
@@ -65,6 +78,19 @@ export default function Menu() {
       <div className="food-list" id="food-list">
         {fakeLoading ? renderFakeLoading() : renderProducts()}
       </div>
+      <ProductDetail
+        show={!!selectedProduct}
+        onHide={() => setSelectedProduct(null)}
+        product={selectedProduct}
+        setShowPopUp={setShowPopUp}
+        setAddedItem={setAddedItem}
+      />
+      <PopUp
+        onHide={() => setShowPopUp(false)}
+        show={showPopUp}
+        item={addedItem}
+        type="add"
+      />
     </div>
   );
 }

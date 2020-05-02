@@ -3,15 +3,15 @@ import ReactDOM from "react-dom";
 import "./index.css";
 
 //context
-import { MenuProvider } from "./contexts/menu";
+import { GlobalProvider } from "./contexts/global";
 
 import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <MenuProvider>
+    <GlobalProvider>
       <App />
-    </MenuProvider>
+    </GlobalProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

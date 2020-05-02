@@ -3,7 +3,10 @@ import "./styles.css";
 
 export default function Product(props) {
   return (
-    <div className="product-card">
+    <div
+      className="product-card"
+      onClick={() => props.setSelectedProduct(props.item)}
+    >
       <div className="product-details">
         <div className="product-title">{props.item.name}</div>
         <div className="product-category">

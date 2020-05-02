@@ -1,0 +1,38 @@
+.quantity-buttons {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.operator-button {
+  padding-top: 2px;
+  height: 30px;
+  width: 30px;
+  background-color: #1d1d1f;
+  font-weight: bold;
+  font-size: large;
+  color: white;
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+          supported by Chrome, Opera and Firefox */
+}
+
+.quantity {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2px;
+  border-top: solid;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: gray;
+}
+
+.operator-button:active {
+  background-color: black;
+  color: gray;
+}

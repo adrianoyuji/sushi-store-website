@@ -2,11 +2,12 @@ import React, { createContext, useState, useEffect } from "react";
 import Loading from "../pages/Loading";
 import getMenu from "../services/firebaseService";
 
-export const MenuContext = createContext({});
+export const GlobalContext = createContext({});
 
-export const MenuProvider = ({ children }) => {
+export const GlobalProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [menu, setMenu] = useState([]);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     async function loadMenu() {
@@ -21,6 +22,8 @@ export const MenuProvider = ({ children }) => {
   return loading ? (
     <Loading />
   ) : (
-    <MenuContext.Provider value={{ menu }}>{children}</MenuContext.Provider>
+    <GlobalContext.Provider value={{ menu, cart, setCart }}>
+      {children}
+    </GlobalContext.Provider>
   );
 };

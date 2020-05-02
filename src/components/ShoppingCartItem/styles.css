@@ -1,0 +1,85 @@
+.shoppingcart-item {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  color: black;
+  padding: 5px;
+  height: 128px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  transition: ease-in 0.1s;
+  cursor: pointer;
+}
+.shoppingcart-name {
+  font-size: large;
+  font-weight: bold;
+}
+
+.shoppingcart-category {
+  color: gray;
+  font-size: small;
+  padding-bottom: 25px;
+}
+
+.shoppingcart-image {
+  flex: 1;
+  max-width: 200px;
+}
+
+.shoppingcart-price {
+  color: forestgreen;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.shoppingcart-details {
+  padding-left: 5px;
+  flex-grow: 3;
+}
+
+.shoppingcart-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.shoppingcart-remove {
+  border-radius: 4px;
+  margin-top: 20%;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  background-color: red;
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+          supported by Chrome, Opera and Firefox */
+}
+.shoppingcart-remove:active {
+  background-color: darkred;
+  color: gray;
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+
+  [class*="shoppingcart-name"] {
+    font-size: medium;
+  }
+
+  [class*="shoppingcart-image"] {
+    min-width: 110px;
+  }
+  [class*="shoppingcart-category"] {
+    padding-bottom: unset;
+    font-size: smaller;
+  }
+  .subtotal {
+    font-size: small;
+    flex-grow: 1;
+  }
+}

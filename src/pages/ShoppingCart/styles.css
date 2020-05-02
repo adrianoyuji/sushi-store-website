@@ -1,0 +1,151 @@
+.shopping-cart {
+  height: 95vh;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://images.unsplash.com/photo-1508006728353-6ecef00dcbb8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-right: 20vw;
+  padding-left: 20vw;
+  flex-direction: column;
+  background-position: center;
+}
+
+.shoppingcart-empty {
+  display: flex;
+  justify-content: center;
+}
+
+.shoppingcart-title {
+  color: white;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
+  margin: 2vh;
+}
+
+.shoppingcart-list {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.shoppincartlist-header {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.shoppincartlist-items {
+  flex-grow: 1;
+}
+
+.shoppingcart-footer {
+  height: 10vh;
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  padding: 15px;
+  font-size: x-large;
+  align-items: center;
+}
+
+.shoppingcart-total {
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+.shoppingcart-submit {
+  background-color: forestgreen;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+          supported by Chrome, Opera and Firefox */
+}
+
+.shoppingcart-submit:active {
+  background-color: darkgreen;
+}
+
+@media only screen and (max-width: 1300px) {
+  /* For mobile phones: */
+
+  [class*="shopping-cart"] {
+    padding-right: 10vh;
+    padding-left: 10vh;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+  [class*="shopping-cart"] {
+    padding-right: unset;
+    padding-left: unset;
+  }
+  [class*="shoppingcart-title"] {
+    font-size: large;
+  }
+  [class*="shoppingcart-list"] {
+    padding-left: unset;
+    padding-right: unset;
+  }
+  [class*="shoppincartlist-header"] {
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: small;
+  }
+  [class*="shoppingcart-footer"] {
+    font-size: medium;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* For mobile phones: */
+
+  .shoppingcart-submit:hover {
+    background-color: darkgreen;
+  }
+}
+
+/*ScrollBar style */
+#shoppingcart-list::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#shoppingcart-list::-webkit-scrollbar {
+  width: 12px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#shoppingcart-list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}

@@ -1,0 +1,61 @@
+.add-to-cart-button {
+  background-color: forestgreen;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+          supported by Chrome, Opera and Firefox */
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: row;
+}
+
+.modal-description {
+  padding-left: 10px;
+  text-align: justify;
+  flex: 1;
+}
+.modal-image {
+  flex: 1;
+}
+
+.modal-price {
+  color: forestgreen;
+  font-size: medium;
+}
+.modal-quantity {
+  flex-grow: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+  [class*="modal-body"] {
+    flex-direction: column;
+  }
+  [class*="modal-description"] {
+    padding-left: unset;
+    padding-top: 10px;
+  }
+  .add-to-cart-button:active {
+    background-color: darkgreen;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* For mobile phones: */
+
+  .add-to-cart-button:hover {
+    background-color: green;
+  }
+  .add-to-cart-button:active {
+    background-color: darkgreen;
+  }
+}

@@ -20,7 +20,7 @@ export default function Product(props) {
         <img
           src={props.item.image}
           alt={props.item.name}
-          height="146"
+          height="100%"
           width="100%"
         />
       </div>

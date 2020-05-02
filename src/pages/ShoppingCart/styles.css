@@ -91,14 +91,6 @@
   background-color: darkgreen;
 }
 
-@media only screen and (max-width: 1300px) {
-  /* For mobile phones: */
-
-  [class*="shopping-cart"] {
-    padding-right: 10vh;
-    padding-left: 10vh;
-  }
-}
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
 

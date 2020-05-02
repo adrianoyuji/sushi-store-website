@@ -12,3 +12,28 @@
   flex-direction: column;
   background-position: center;
 }
+
+.about-section {
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+  [class*="about"] {
+    padding-right: unset;
+    padding-left: unset;
+  }
+
+  [class*="about-section"] {
+    padding-left: 15px;
+  }
+}

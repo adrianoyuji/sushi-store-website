@@ -1,0 +1,23 @@
+.loading {
+  height: 100vh;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  flex-direction: column;
+}
+
+.loading-left {
+  color: white;
+  font-size: x-large;
+}
+.loading-right {
+  color: red;
+  font-size: x-large;
+}
+
+.loading-title {
+  display: flex;
+  flex-direction: row;
+}

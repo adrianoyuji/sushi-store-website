@@ -2,16 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 
-import { Provider } from "react-redux";
-import store from "./store";
+//context
+import { MenuProvider } from "./contexts/menu";
 
 import App from "./App";
 
 ReactDOM.render(
-  <Provider store={store}>
-    <React.StrictMode>
+  <React.StrictMode>
+    <MenuProvider>
       <App />
-    </React.StrictMode>
-  </Provider>,
+    </MenuProvider>
+  </React.StrictMode>,
   document.getElementById("root")
 );

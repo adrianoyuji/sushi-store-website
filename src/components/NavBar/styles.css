@@ -8,6 +8,7 @@
 }
 .home-button {
   padding-left: 10px;
+  padding-right: 10px;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -18,10 +19,6 @@
 .home-right {
   color: red;
   font-weight: bold;
-}
-a:hover {
-  color: red;
-  text-decoration: none;
 }
 
 .selected {
@@ -40,6 +37,18 @@ a:hover {
   padding-left: 5px;
   padding-right: 5px;
   color: #c4c4c4;
+}
+
+.home-button:active {
+  background-color: #09090a;
+}
+
+a:hover {
+  color: red;
+  text-decoration: none;
+}
+a:active {
+  color: darkred;
 }
 
 @media only screen and (max-width: 768px) {

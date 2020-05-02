@@ -7,6 +7,7 @@ export default function getMenu(setLoading) {
     .get()
     .then((snapshot) => {
       snapshot.docs.forEach((doc) => menu.push(doc.data()));
+      setLoading(false);
     });
 
   return menu;

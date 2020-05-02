@@ -27,7 +27,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-  /* For even smaller mobile phones: */
+  /* For mobile phones: */
 
   [class*="title-container"] {
     font-size: xx-large;

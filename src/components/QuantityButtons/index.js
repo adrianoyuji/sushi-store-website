@@ -16,11 +16,14 @@ export default function QuantityButtons(props) {
 
   return (
     <div className="quantity-buttons">
-      <div className="operator-button" onClick={() => handleQuantity("-")}>
+      <div className="operator-button-left" onClick={() => handleQuantity("-")}>
         -
       </div>
       <div className="quantity">{props.quantity}</div>
-      <div className="operator-button" onClick={() => handleQuantity("+")}>
+      <div
+        className="operator-button-right"
+        onClick={() => handleQuantity("+")}
+      >
         +
       </div>
     </div>

@@ -1,0 +1,60 @@
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+/* input[type="number"] {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+} */
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+.form-label {
+  margin: 0;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-address {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-location {
+  display: flex;
+  flex-direction: row;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  padding-right: 15px;
+  flex: 1;
+}

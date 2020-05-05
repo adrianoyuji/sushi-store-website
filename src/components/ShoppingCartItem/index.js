@@ -25,6 +25,7 @@ export default function ShoppingCartItem(props) {
           alt={props.product.name}
           height="100%"
           width="100%"
+          className="shoppingcart-image"
         />
       </div>
       <div className="shoppingcart-details">

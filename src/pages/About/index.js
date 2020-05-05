@@ -6,11 +6,17 @@ export default function About() {
     <div className="about">
       <div className="about-section">
         <p>
-          Hi! This a Sushi Shop website that shows the restaurant's menu and the
-          user is able to set up a cart with desired items.
+          Hi there! Welcome to my sushi store frontend website! I'm Adriano Yuji
+          Sato de Vasconcelos, I'm a 22 years old soon to be computer engineer
+          Frontend developer and this is my little personal project.
         </p>
         <p>
-          This website was developed using:
+          This website was developed in order to challenge myself so I can
+          improve my creativity, decision making and Frontend skills, feel free
+          to test and play around this sushi online store!
+        </p>
+        <p>
+          This website was developed with:
           <li>React Hooks</li>
           <li>React Context</li>
           <li>Bootstrap</li>
@@ -21,13 +27,13 @@ export default function About() {
           <a href="https://github.com/adrianoyuji/sushi-store-website">
             Click here
           </a>{" "}
-          to check out the source code on GitHub.
+          to check the source code on GitHub.
         </p>
         <p>
           <a href="https://www.linkedin.com/in/adriano-yuji-sato-de-vasconcelos-034b09191/">
             Click here
           </a>{" "}
-          to check my profile and to contact me through Linkedin.
+          to check my Linkedin profile, feel free to send me a message!
         </p>
         Email: adrianoyuji@gmail.com
       </div>

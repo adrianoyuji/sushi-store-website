@@ -1,0 +1,18 @@
+.checkout-title {
+  font-size: large;
+  font-size: xx-large;
+}
+.checkout-subtitle {
+  font-size: small;
+}
+.checkout-modal {
+  padding: 10px;
+}
+.checkout-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.checkout-title-container {
+  flex-grow: 1;
+}

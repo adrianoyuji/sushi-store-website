@@ -22,6 +22,7 @@ export default function Product(props) {
           alt={props.item.name}
           height="100%"
           width="100%"
+          className="product-img"
         />
       </div>
     </div>

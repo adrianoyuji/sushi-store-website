@@ -5,6 +5,7 @@ import PopUp from "../../components/PopUp";
 import { GlobalContext } from "../../contexts/global";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCashRegister } from "@fortawesome/free-solid-svg-icons";
+import Checkout from "../../components/Checkout";
 
 export default function ShoppingCart() {
   const { cart, setCart } = useContext(GlobalContext);
@@ -12,6 +13,7 @@ export default function ShoppingCart() {
   const [quantityWatcher, setQuantityWatcher] = useState(false);
   const [showPopUp, setShowPopUp] = useState(false);
   const [removedItem, setRemovedItem] = useState("");
+  const [checkout, setCheckout] = useState(false);
 
   useEffect(() => {
     let newValue = 0;
@@ -55,12 +57,7 @@ export default function ShoppingCart() {
         <div className="shoppingcart-total">
           Total: US$ {totalValue.toFixed(2)}
         </div>
-        <div
-          className="shoppingcart-submit"
-          onClick={() =>
-            alert("Thanks for testing my website! by Adriano Yuji")
-          }
-        >
+        <div className="shoppingcart-submit" onClick={() => setCheckout(true)}>
           <FontAwesomeIcon icon={faCashRegister} />
           {"  "}
           PURCHASE
@@ -72,6 +69,7 @@ export default function ShoppingCart() {
         item={removedItem}
         type="remove"
       />
+      <Checkout show={!!checkout} onHide={() => setCheckout(false)} />
     </div>
   );
 }

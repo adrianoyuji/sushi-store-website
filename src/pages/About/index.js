@@ -20,8 +20,9 @@ export default function About() {
           <li>React Hooks</li>
           <li>React Context</li>
           <li>Bootstrap</li>
+          <li>React Hook Forms</li>
           <li>FontAwesome Icons</li>
-          <li>Firebase's Firestore</li>
+          <li>Firestore</li>
         </p>
         <p>
           <a href="https://github.com/adrianoyuji/sushi-store-website">

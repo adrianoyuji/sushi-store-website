@@ -72,12 +72,31 @@
   justify-content: flex-start;
   flex-grow: 1;
 }
+a {
+  color: white;
+}
+a:hover {
+  color: white;
+}
 
 .shoppingcart-submit {
   background-color: forestgreen;
   padding: 5px;
   border-radius: 4px;
   cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+          supported by Chrome, Opera and Firefox */
+}
+
+.shoppingcart-button-empty {
+  background-color: gray;
+  padding: 5px;
+  border-radius: 4px;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */

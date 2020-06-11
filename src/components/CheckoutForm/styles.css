@@ -9,17 +9,9 @@ select {
   border-radius: 4px;
   box-sizing: border-box;
 }
-/* input[type="number"] {
-  width: 100%;
-  padding: 6px 10px;
-  margin: 5px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-} */
 
-input[type="submit"] {
+.submit-button {
+  text-align: center;
   width: 100%;
   background-color: #4caf50;
   color: white;
@@ -30,7 +22,11 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
+.errorText {
+  color: red;
+}
+
+.submit-button:hover {
   background-color: #45a049;
 }
 .form-label {

@@ -1,0 +1,101 @@
+.checkout {
+  height: 95vh;
+  width: auto;
+  background-image: url("https://i.pinimg.com/originals/46/fd/8c/46fd8c9dccc44722c5f42f51465846a7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  color: white;
+  align-items: center;
+  flex-direction: column;
+  background-position: center;
+  justify-content: center;
+}
+
+.checkout-container {
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  text-align: left;
+}
+.checkout-list {
+  padding-bottom: 30px;
+}
+
+.checkout-list-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.checkout-list-name {
+  flex-grow: 1;
+}
+.checkout-header-qtd {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+}
+
+.checkout-header-name {
+  flex-grow: 1;
+  font-weight: bold;
+}
+
+.checkout-title {
+  font-size: xx-large;
+}
+.checkout-subtitle {
+  font-size: small;
+}
+
+.checkout-total {
+  border-top: solid;
+  border-width: 1px;
+  font-size: large;
+  text-align: end;
+}
+
+.checkout-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+  text-align: center;
+  font-size: xx-large;
+  margin-bottom: 3vh;
+}
+.checkout-title-container {
+  flex: 1;
+}
+
+.checkout-scroll {
+  max-height: 110px;
+  -ms-overflow-style: none;
+  overflow: scroll;
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+
+  [class*="checkout-title"] {
+    font-size: medium;
+  }
+  [class*="checkout-subtitle"] {
+    font-size: smaller;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.checkout-scroll::-webkit-scrollbar {
+  display: none;
+}

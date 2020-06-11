@@ -5,6 +5,7 @@ import About from "../pages/About";
 import Home from "../pages/Home";
 import NavBar from "../components/NavBar";
 import ShoppingCart from "../pages/ShoppingCart";
+import Checkout from "../pages/Checkout";
 
 export default function Routes() {
   return (
@@ -13,6 +14,9 @@ export default function Routes() {
         <NavBar />
 
         <Switch>
+          <Route path="/checkout">
+            <Checkout />
+          </Route>
           <Route path="/about">
             <About />
           </Route>

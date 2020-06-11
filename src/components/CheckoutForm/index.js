@@ -1,28 +1,81 @@
 import React from "react";
 import "./styles.css";
+import { useForm } from "react-hook-form";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
 
 export default function CheckoutForm(props) {
+  const { register, handleSubmit, errors } = useForm();
+  const onSubmit = (data) =>
+    alert(
+      "Thanks for testing my website! Feel free to message me on LinkedIn!"
+    );
+
   return (
-    <form onSubmit={() => alert("thanks for the purchase")}>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <div className="user-info">
         <div className="input-container">
           <label className="form-label">Full Name: </label>
-          <input type="text" placeholder="ex: Carl Johnson" />
+          <input
+            name="username"
+            type="text"
+            placeholder="ex: Carl Johnson"
+            ref={register({ required: true })}
+          />
+          {errors.username && (
+            <span className="errorText">
+              <FontAwesomeIcon icon={faExclamationTriangle} />
+              This field is required!
+            </span>
+          )}
         </div>
         <div className="input-container">
           <label className="form-label">Email: </label>
-          <input type="text" placeholder="ex: carljohnson@email.com" />
+          <input
+            name="email"
+            type="text"
+            placeholder="ex: carljohnson@email.com"
+            ref={register({ required: true })}
+          />
+          {errors.email && (
+            <span className="errorText">
+              <FontAwesomeIcon icon={faExclamationTriangle} />
+              This field is required!
+            </span>
+          )}
         </div>
       </div>
 
       <div className="user-address">
         <div className="input-container">
           <label className="form-label">Shipping Address: </label>
-          <input type="text" placeholder="ex: Grove Street" />
+          <input
+            name="shippingAddress"
+            type="text"
+            placeholder="ex: Grove Street"
+            ref={register({ required: true })}
+          />
+          {errors.shippingAddress && (
+            <span className="errorText">
+              <FontAwesomeIcon icon={faExclamationTriangle} />
+              This field is required!
+            </span>
+          )}
         </div>
         <div className="input-container">
           <label className="form-label">Address number: </label>
-          <input type="number" placeholder="ex: 123" />
+          <input
+            name="addressNumber"
+            type="number"
+            placeholder="ex: 123"
+            ref={register({ required: true })}
+          />
+          {errors.addressNumber && (
+            <span className="errorText">
+              <FontAwesomeIcon icon={faExclamationTriangle} />
+              This field is required!
+            </span>
+          )}
         </div>
       </div>
 
@@ -30,21 +83,58 @@ export default function CheckoutForm(props) {
         <div className="input-container">
           {" "}
           <label className="form-label">City: </label>
-          <input type="text" placeholder="ex: Los Santos" />
+          <input
+            name="city"
+            type="text"
+            placeholder="ex: Los Santos"
+            ref={register({ required: true })}
+          />
+          {errors.city && (
+            <span className="errorText">
+              <FontAwesomeIcon icon={faExclamationTriangle} />
+              This field is required!
+            </span>
+          )}
         </div>
         <div className="input-container">
           {" "}
           <label className="form-label">State: </label>
-          <input type="text" placeholder="ex: California" />
+          <input
+            name="state"
+            type="text"
+            placeholder="ex: California"
+            ref={register({ required: true })}
+          />
+          {errors.state && (
+            <span className="errorText">
+              <FontAwesomeIcon icon={faExclamationTriangle} />
+              This field is required!
+            </span>
+          )}
         </div>
         <div className="input-container">
           {" "}
           <label className="form-label">ZIP: </label>
-          <input type="number" placeholder="ex: 123456" />
+          <input
+            name="zip"
+            type="number"
+            placeholder="ex: 123456"
+            ref={register({ required: true })}
+          />
+          {errors.zip && (
+            <span className="errorText">
+              <FontAwesomeIcon icon={faExclamationTriangle} />
+              This field is required!
+            </span>
+          )}
         </div>
       </div>
 
-      <input type="submit" value="Finish and Submit" />
+      <input
+        className="submit-button"
+        type="submit"
+        value="Finish and Submit"
+      />
     </form>
   );
 }

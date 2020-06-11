@@ -1,11 +1,11 @@
 import React, { useState, useContext, useEffect } from "react";
 import "./styles.css";
 import ShoppingCartItem from "../../components/ShoppingCartItem";
+import { Link } from "react-router-dom";
 import PopUp from "../../components/PopUp";
 import { GlobalContext } from "../../contexts/global";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCashRegister } from "@fortawesome/free-solid-svg-icons";
-import Checkout from "../../components/Checkout";
 
 export default function ShoppingCart() {
   const { cart, setCart } = useContext(GlobalContext);
@@ -13,7 +13,6 @@ export default function ShoppingCart() {
   const [quantityWatcher, setQuantityWatcher] = useState(false);
   const [showPopUp, setShowPopUp] = useState(false);
   const [removedItem, setRemovedItem] = useState("");
-  const [checkout, setCheckout] = useState(false);
 
   useEffect(() => {
     let newValue = 0;
@@ -26,6 +25,23 @@ export default function ShoppingCart() {
     setCart(cart.filter((item) => item.id !== id));
     setRemovedItem(name);
     setShowPopUp(true);
+  }
+
+  function checkoutButton() {
+    if (cart.length > 0) {
+      return (
+        <div className="shoppingcart-submit">
+          <FontAwesomeIcon icon={faCashRegister} />
+          <Link to="/checkout"> CHECKOUT</Link>
+        </div>
+      );
+    } else {
+      return (
+        <div className="shoppingcart-button-empty">
+          <FontAwesomeIcon icon={faCashRegister} /> CHECKOUT
+        </div>
+      );
+    }
   }
 
   return (
@@ -57,11 +73,7 @@ export default function ShoppingCart() {
         <div className="shoppingcart-total">
           Total: US$ {totalValue.toFixed(2)}
         </div>
-        <div className="shoppingcart-submit" onClick={() => setCheckout(true)}>
-          <FontAwesomeIcon icon={faCashRegister} />
-          {"  "}
-          PURCHASE
-        </div>
+        {checkoutButton()}
       </div>
       <PopUp
         onHide={() => setShowPopUp(false)}
@@ -69,7 +81,6 @@ export default function ShoppingCart() {
         item={removedItem}
         type="remove"
       />
-      <Checkout show={!!checkout} onHide={() => setCheckout(false)} />
     </div>
   );
 }

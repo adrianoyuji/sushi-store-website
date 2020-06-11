@@ -46,7 +46,7 @@ export default function ShoppingCartItem(props) {
             props.handleRemove(props.id, props.product.name);
           }}
         >
-          <FontAwesomeIcon icon={faTrashAlt} size={16} /> REMOVE
+          <FontAwesomeIcon icon={faTrashAlt} /> REMOVE
         </div>
       </div>
     </div>
